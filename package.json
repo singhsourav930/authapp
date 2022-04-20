@@ -11,10 +11,11 @@
   "homepage": "",
   "description": "",
   "scripts": {
+    "all-install": "yarn install && cd web && yarn install",
     "web-install": "cd web && yarn install",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "web": "yarn start --prefix web",
+    "web": "cd web && yarn start web",
     "dev": "concurrently \"yarn run server\" \"yarn run web\"",
     "heroku-postbuild": "cd web && yarn install && yarn install --only=dev && yarn install && yarn run build"
   },
