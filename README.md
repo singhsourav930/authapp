@@ -30,6 +30,10 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your terminal 
 
 This command run all projects like front-end and back-end concurrently
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:8080](http://localhost:8080) to view it in your terminal console.
+
 ### `yarn web-build`
 
 This command create web project production build
