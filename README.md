@@ -1,4 +1,19 @@
 # Getting Started with Auth app
+## Tech Stack
+
+`
+Front-End: React JS(Web)
+`
+
+`
+Back-end: Node js(Server)
+`
+
+`
+Database: MongoDB
+`
+
+
 
 ## To install dependencies run below commands on root folder director
 
