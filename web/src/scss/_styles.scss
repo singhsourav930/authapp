@@ -1,0 +1,57 @@
+@import '~bootstrap/scss/bootstrap';
+@import './variables';
+@import './mediaQueryMixins';
+@import './mixins';
+@import './flex';
+
+*,
+html,
+body,
+#__next {
+  @include hide-input-number-arrow();
+}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+hr,
+li {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Montserrat';
+}
+
+#nprogress .bar {
+  background: $themeOrange !important;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: $defaulFontSize + 13;
+  color: $black2;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: $defaulFontSize + 6;
+  color: $themeOrange;
+}
+
+p {
+  font-size: $defaulFontSize + 7;
+  color: $black3;
+}
+
+.mobile-container {
+  max-width: $mobileMaxWidth;
+  padding: 10px 20px 40px 20px;
+  margin: 0px auto;
+  margin-top: 10px;
+  @include box-shadow(1px 1px 10px rgba($grey, 0.3));
+  @include border-radius(10px);
+}

@@ -1,0 +1,145 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+
+  -ms-border-radius: $radius;
+}
+@mixin border-top-right-radius($top_right_radius) {
+  -webkit-border-top-right-radius: $top_right_radius;
+  border-top-right-radius: $top_right_radius;
+
+  -moz-border-top-right-radius: $top_right_radius;
+  -ms-border-top-right-radius: $top_right_radius;
+}
+@mixin border-bottom-right-radius($bottom_right_radius) {
+  -webkit-border-bottom-right-radius: $bottom_right_radius;
+  border-bottom-right-radius: $bottom_right_radius;
+
+  -moz-border-bottom-right-radius: $bottom_right_radius;
+  -ms-border-bottom-right-radius: $bottom_right_radius;
+}
+@mixin border-top-left-radius($top_left_radius) {
+  -webkit-border-top-left-radius: $top_left_radius;
+  border-top-left-radius: $top_left_radius;
+
+  -moz-border-top-left-radius: $top_left_radius;
+  -ms-border-top-left-radius: $top_left_radius;
+}
+@mixin border-bottom-left-radius($bottom_left_radius) {
+  -webkit-border-bottom-left-radius: $bottom_left_radius;
+  -moz-border-bottom-left-radius: $bottom_left_radius;
+  -ms-border-bottom-left-radius: $bottom_left_radius;
+  border-bottom-left-radius: $bottom_left_radius;
+}
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
+@mixin transition-delay($delay) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -ms-transition-delay: $delay;
+  transition-delay: $delay;
+}
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -ms-animation: $animation;
+  animation: $animation;
+}
+@mixin box-shadow($box-shadow) {
+  -webkit-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
+
+  -ms-box-shadow: $box-shadow;
+}
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari/Edge */
+    /*styles here*/
+    color: $color;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    /*styles here*/
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    /*styles here*/
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    opacity: 1; /*Firefox by default has an opacity object that usually is ideal to reset so it matches webkit*/
+    /*styles here*/
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    opacity: 1; /*Firefox by default has an opacity object that usually is ideal to reset so it matches webkit*/
+    /*styles here*/
+    color: $color;
+  }
+
+  &::placeholder {
+    /*styles here*/
+    color: $color;
+  }
+}
+
+@mixin hide-input-number-arrow() {
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, $white, 50%)
+) {
+  cursor: pointer;
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    cursor:pointer;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

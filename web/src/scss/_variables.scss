@@ -1,0 +1,25 @@
+/**
+ *  Color Scheme
+ */
+$white: #ffffff;
+$grey: #c4c4c4;
+$grey2: #dfdfdf;
+$black: #000000;
+$black2: #051821;
+$black3: #2d2d2d;
+$themeOrange: #f55800;
+$disabledOrange: #ffc3a0;
+$brown: #3d1808;
+$errorRed: #ff5152;
+
+// Font size
+$defaulFontSize: 8px;
+
+// mobile max width
+$mobileMaxWidth: 414px;
+
+// the :export directive is the magic sauce for webpack
+:export {
+  black: $black;
+  white: $white;
+}

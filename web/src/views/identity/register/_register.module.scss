@@ -1,0 +1,35 @@
+@import "scss/_variables";
+@import "scss/_mixins.scss";
+@import "scss/_mediaQueryMixins.scss";
+@import "scss/_flex.scss";
+
+.register {
+  .logo-img {
+    margin: auto;
+    display: block;
+    width: 148px;
+  }
+  .your-logo {
+    text-align: center;
+    font-weight: 600;
+    font-size: $defaulFontSize + 12;
+    padding-right: 6px;
+  }
+  .logo-merchant {
+    padding-top: 5px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $defaulFontSize + 2;
+    line-height: 12px;
+    text-align: center;
+    letter-spacing: 0.4em;
+    color: $brown;
+  }
+  .login-fill {
+    a {
+      font-size: $defaulFontSize + 3;
+
+      color: $themeOrange;
+    }
+  }
+}

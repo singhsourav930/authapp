@@ -1,0 +1,37 @@
+@import "scss/_variables.scss";
+@import "scss/_mixins.scss";
+@import "scss/_mediaQueryMixins.scss";
+@import "scss/_flex.scss";
+
+.text-input {
+  .label {
+    font-weight: 400;
+    font-size: $defaulFontSize + 4;
+    line-height: 30px;
+    color: $black3;
+    display: block;
+  }
+
+  .input {
+    border: none;
+    border-bottom: 2px solid $grey;
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    outline: unset;
+    font-weight: 500;
+    &::placeholder {
+      font-weight: 400;
+      font-size: $defaulFontSize + 7;
+      line-height: 30px;
+    }
+    @include placeholder-color($grey);
+  }
+
+  .error {
+    color: $errorRed;
+    font-size: $defaulFontSize + 4;
+    font-weight: 400;
+  }
+}
