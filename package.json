@@ -13,6 +13,7 @@
   "scripts": {
     "all-install": "yarn install && cd web && yarn install",
     "web-install": "cd web && yarn install",
+    "web-build": "cd web && yarn build",
     "start": "node server.js",
     "server": "nodemon server.js",
     "web": "cd web && yarn start web",
