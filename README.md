@@ -36,6 +36,9 @@ Step 3: Copy below code and paste there
 
 `
 SECRET_KEY=your_32_character_secret_key
+`
+
+`
 DB_CONNECT=please_replace_it_with_your_mongodb_connection_string
 `
 
