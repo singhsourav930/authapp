@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const { IdentityCommonModel } = require('./CommonModel');
+const mongoose = require("mongoose");
+const { IdentityCommonModel } = require("./CommonModel");
 
 const identity_schema = new mongoose.Schema({
   email: {
@@ -20,11 +20,7 @@ const identity_schema = new mongoose.Schema({
     min: 2,
     max: 1024,
   },
-  designation: {
-    type: String,
-    min: 2,
-  },
   ...IdentityCommonModel,
 });
 
-module.exports = mongoose.model('identities', identity_schema);
+module.exports = mongoose.model("identities", identity_schema);

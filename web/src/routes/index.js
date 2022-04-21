@@ -11,7 +11,6 @@ import { getUserLocalStorage } from "utils";
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
   const userData = getUserLocalStorage();
-  console.log("userData--->>>", userData);
   const navigate = useNavigate();
   return userData?.token ? (
     <MainLayout>
