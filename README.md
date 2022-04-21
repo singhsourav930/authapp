@@ -4,25 +4,35 @@
 
 `Front-End: React JS(Web)`
 
+`Android: React JS(Mobile)`
+
 `Back-end: Node js(Server)`
 
 `Database: MongoDB`
 
-## Setup / Installation: 
+## Setup / Installation:
 
 Please install node js in your system from below link
 
 https://nodejs.org/en/
 
-## To install dependencies run below commands on root folder director
+Please install android studio from below link
+
+https://developer.android.com/studio
+
+## To install dependencies please run below commands on root folder director
 
 ### `yarn all-install`
 
-This command install all project dependencies like web, mobile(front-end) and node js(back-end)
+This command install all project dependencies like web(front-end), mobile and node js(back-end)
 
 ### `yarn web-install`
 
 This command install only web project dependencies
+
+### `yarn mobile-install`
+
+This command install only mobile project dependencies
 
 ### `yarn install`
 
@@ -59,6 +69,10 @@ Step 3: Copy below code and paste there
 Runs the web app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+### `yarn mobile`
+
+Runs the mobile app in the android studio.\
+
 ### `yarn server`
 
 Runs the back-end app in the development mode.\
@@ -66,7 +80,7 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your terminal 
 
 ### `yarn dev`
 
-This command run all projects like front-end and back-end concurrently
+This command run all projects like front-end and back-end and mobile app in android studio concurrently
 
 Runs the apps in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
