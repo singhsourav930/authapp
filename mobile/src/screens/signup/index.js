@@ -15,6 +15,7 @@ export default class Signup extends Component {
     this.state = {
       email: '',
       password: '',
+      confirmPassword: '',
       isLoading: false,
     };
   }
@@ -24,8 +25,14 @@ export default class Signup extends Component {
     this.setState(state);
   };
   registerUser = () => {
-    if (this.state.email === '' && this.state.password === '') {
+    if (
+      this.state.email === '' &&
+      this.state.password === '' &&
+      this.state.confirmPassword === ''
+    ) {
       Alert.alert('Enter details to signup!');
+    } else if (this.state.password !== this.state.confirmPassword) {
+      Alert.alert('Password and Confirm Password should be match!');
     } else {
       this.setState({
         isLoading: true,
@@ -35,7 +42,7 @@ export default class Signup extends Component {
         password: this.state.password || '',
       };
 
-      fetch('http://192.168.99.20:8080/api/v1/auth/register', {
+      fetch('http://192.168.1.2:8080/api/v1/auth/register', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -88,6 +95,14 @@ export default class Signup extends Component {
           placeholder="Password"
           value={this.state.password}
           onChangeText={val => this.updateInputVal(val, 'password')}
+          maxLength={15}
+          secureTextEntry={true}
+        />
+        <TextInput
+          style={styles.inputStyle}
+          placeholder="Confirm Password"
+          value={this.state.confirmPassword}
+          onChangeText={val => this.updateInputVal(val, 'confirmPassword')}
           maxLength={15}
           secureTextEntry={true}
         />

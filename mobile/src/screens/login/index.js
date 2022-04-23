@@ -34,7 +34,7 @@ export default class Login extends Component {
         email: this.state.email || '',
         password: this.state.password || '',
       };
-      fetch('http://192.168.99.20:8080/api/v1/auth/signin', {
+      fetch('http://192.168.1.2:8080/api/v1/auth/signin', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
